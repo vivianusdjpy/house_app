@@ -2,28 +2,26 @@
 
 import Footer from '@src/components/Footer/Footer'
 import RootLayout from './layout'
-import Header from '@src/components/NavBar/NavBar'
+import Hero from '@src/components/Hero/Hero'
 import styled from 'styled-components'
 
 const LandingPage = () => {
   return (
-    <RootLayout>   
-      <StyledOverlay/>   
-        <Header/>
+    <StyledOverlay>          
+        <Hero/>
         LandingPage
         <Footer/>      
-    </RootLayout>
+    </StyledOverlay>
   )
 }
 
 const StyledOverlay = styled.div`  
   position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  right: 10px;
-  bottom: 10px;
+  top: 30px;
+  left: 30px;
+  bottom: 30px;
+  right: 30px;  
   z-index: 1;
-  background-color: rgba(235, 228, 228, 0.719);
+  background-color: #f7f4f4;
 `;
 export default LandingPage

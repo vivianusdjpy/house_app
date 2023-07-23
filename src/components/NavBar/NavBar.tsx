@@ -1,40 +1,77 @@
+// components/Navbar.js (for JavaScript) or components/Navbar.jsx (for JSX)
+import React from 'react';
 import styled from 'styled-components';
 
-const HeaderContainer = styled.header`
-  width: 100%;
-  height: 20px; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  z-index: 100;
+const NavContainer = styled.nav`
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
 `;
-const NavList = styled.ul`
+
+const Brand = styled.div`
+  font-weight: bold;
+  margin-right: auto;
+`;
+
+const Links = styled.ul`
   list-style: none;
   display: flex;
   align-items: center;
-  height: 100%;
   padding: 0;
   margin: 0;
 `;
 
-const NavItem = styled.li`
-  padding: 0 20px;
-  color: white;
-  font-size: 16px;
+const LinkItem = styled.li`
+  margin-right: 20px;
 `;
 
+const ExpandableItem = styled.li`
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
 
-const Header = () => {
+  &:hover .expandable-list {
+    display: block;
+  }
+`;
+
+const ExpandableList = styled.ul`
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  
+  padding: 10px;
+`;
+
+const Navbar = () => {
   return (
-    <HeaderContainer>
-      <NavList>
-        <NavItem>Home</NavItem>
-        <NavItem>About</NavItem>
-        <NavItem>Contact</NavItem>
-      </NavList>
-    </HeaderContainer>
-  )
-}
+    <NavContainer>
+      <Brand>
+        {/* Navbar brand/logo */}
+      </Brand>
+      <Links>
+        <LinkItem>
+          <a href="#">Home</a>
+        </LinkItem>
+        <LinkItem>
+          <a href="#">About</a>
+        </LinkItem>
+        {/* Add other menu items as needed */}
+        <ExpandableItem>
+          <span>More</span>
+          <ExpandableList className="expandable-list">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            {/* Add more expandable list items as needed */}
+          </ExpandableList>
+        </ExpandableItem>
+      </Links>
+    </NavContainer>
+  );
+};
 
-export default Header;
+export default Navbar;

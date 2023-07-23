@@ -7,22 +7,17 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'House App',
-  description: 'Manage your property',
-}
 
 export default function RootLayout({ children,}: {
   children: React.ReactNode
 }) {
-  return (            
-      <Main>
+  return ( 
+    <html lang="en">           
+      <body>
         {children}
-      </Main>    
+      </body>    
+    </html>
   );
 };
 
-const Main = styled.main`
-  width: 100%;
-  height:100%;
-`;
+
