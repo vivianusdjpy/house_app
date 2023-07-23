@@ -1,6 +1,6 @@
 "use client"
 
-import Header from '@src/components/NavBar/NavBar'
+import styled from 'styled-components'
 import '@styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -15,9 +15,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children,}: {
   children: React.ReactNode
 }) {
-  return (    
-    <div>     
-      <main>{children}</main>      
-    </div>
+  return (            
+      <Main>
+        {children}
+      </Main>    
   );
 };
+
+const Main = styled.main`
+  width: 100%;
+  height:100%;
+`;
