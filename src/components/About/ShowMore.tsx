@@ -9,7 +9,7 @@ const FullWidthImageContainer = styled.div`
 `
 
 const FullWidthImage = styled.img`
-	width: 100%;
+	width: 99%;
 	display: block;
 	object-fit: cover;
 `
