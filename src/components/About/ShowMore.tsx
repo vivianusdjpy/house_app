@@ -4,39 +4,34 @@ const FullWidthImageContainer = styled.div`
 	position: relative;
 	display: flex;
 	width: 100%;
-	height: 400px;
+	height: 500px;
 	overflow: hidden;
 `
 
 const FullWidthImage = styled.img`
-	width: 99%;
+	width: 100%;
 	display: block;
 	object-fit: cover;
 `
 
 const ContactUs = styled.div`
 	position: absolute;
-	margin-left: 250px;
-	margin-top: 30px;
+	align-items: center;
+	margin-left: 60%;
+	margin-top: 40px;
 	height: 70%;
-	width: 28%;
+	width: 25%;
 	background-color: white;
 	padding: 20px;
-	padding-left: 60px;
+	padding-left: 50px;
 `
 
 const InputContainer = styled.div`
 	display: flex;
 	align-items: center;
-	border: 1px solid black;
+	border: 1px solid #fab521;
 	height: 35px;
 	width: 80%;
-`
-const ContactText = styled.p`
-	color: black;
-	font-size: 30px;
-	text-align: left;
-	margin-top: 10px;
 `
 
 const TextInput = styled.input`
@@ -47,11 +42,38 @@ const TextInput = styled.input`
 const SendButton = styled.button`
 	width: 100%;
 	height: 100%;
-	margin-left: 8px;
 	background-color: #fab521;
-	color: black;
 	border: none;
+	padding: 5px;
 	cursor: pointer;
+`
+const SearchBarContainer = styled.div`
+	width: 90%;
+	margin-left: 0px;
+	align-items: center;
+	border: none;
+	padding: 0%;
+	background-color: white;
+	  
+
+`
+const Input = styled.input`
+	padding: 2px;
+	outline: none;
+    height: 25px;
+    width: 97%;
+
+
+	
+	&:focus {
+		border-color: #007bff;
+	}
+`
+
+const Select = styled.select`
+	border: 1px solid #ccc;
+	width: 100%;
+	height: 45px;
 `
 
 const ShowMore = () => {
@@ -63,7 +85,42 @@ const ShowMore = () => {
 			/>
 
 			<ContactUs>
-				<ContactText></ContactText>
+				<SearchBarContainer>
+					
+					
+					<Select>
+						<option value="">Location</option>
+						<option value="house">House</option>
+						<option value="apartment">Apartment</option>
+						<option value="condo">Condo</option>
+					</Select>
+                    <Input type="text" placeholder="Nairobi, Kenya" />
+				</SearchBarContainer>
+
+				<SearchBarContainer>
+				
+					
+					<Select>
+						<option value="">Number of bedrooms</option>
+						<option value="house">House</option>
+						<option value="apartment">Apartment</option>
+						<option value="condo">Condo</option>
+					</Select>
+                    <Input type="number" placeholder="3" />
+				</SearchBarContainer>
+
+				<SearchBarContainer>
+				
+					
+					<Select>
+						<option value="Enter amount">Enter amount</option>
+						<option value="house">House</option>
+						<option value="apartment">Apartment</option>
+						<option value="condo">Condo</option>
+					</Select>
+                    <Input type="text" placeholder="0" />
+				</SearchBarContainer>
+
 				<InputContainer>
 					<SendButton>Show More</SendButton>
 				</InputContainer>

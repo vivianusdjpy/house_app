@@ -1,3 +1,5 @@
+
+
 import styled from "styled-components"
 import SearchIcon from "@mui/icons-material/Search"
 
@@ -38,7 +40,7 @@ const HeroContainer = styled.div`
 	position: relative;
 	display: flex;
 	width: 100%;
-	height: 500px;
+	height: 600px;
 	top: 0;
 	background-color: #030316;
 `;

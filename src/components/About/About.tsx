@@ -1,5 +1,6 @@
+"use client"
+
 import styled from "styled-components"
-import SearchIcon from "@mui/icons-material/Search"
 
 const About = () => {
 	return (

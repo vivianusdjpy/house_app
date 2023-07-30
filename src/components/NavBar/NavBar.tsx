@@ -43,7 +43,6 @@ const ExpandableList = styled.ul`
   position: absolute;
   top: 100%;
   left: 0;
-  
   padding: 10px;
 `;
 
